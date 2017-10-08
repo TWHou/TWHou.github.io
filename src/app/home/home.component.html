@@ -1,3 +1,30 @@
-<p>
-  home works!
-</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Christina Hsieh</h1>
+    <p class="lead">Web Developer with a passion for puzzles.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <h2>Skills</h2>
+      HTML5, CSS3, JavaScript, Python, jQuery, Angular, React, Bootstrap, webapp2, Flask, MySQL, PostgreSQL, MongoDB
+    </div>
+    <div class="col-md">
+      <h2>Projects</h2>
+      <div class="card bg-dark text-white">
+        <img class="card-img" [src]="project.image" alt="Card image">
+        <div class="card-img-overlay">
+          <h4 class="card-title">{{project.name}}</h4>
+          <p class="card-text">
+            <span *ngFor="let i of project.stack">
+              {{i}}
+            </span>
+          </p>
+          <p class="card-text">{{project.info}}</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-info" routerLink="/projects">More Projects</button>
+    </div>
+  </div>
+</div>
