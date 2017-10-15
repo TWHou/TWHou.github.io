@@ -7,6 +7,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
+import { ProjectService } from './service/project.service';
+
 import { RoutesModule } from './routes/routes.module';
 
 @NgModule({
@@ -21,7 +23,7 @@ import { RoutesModule } from './routes/routes.module';
     BrowserModule,
     RoutesModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

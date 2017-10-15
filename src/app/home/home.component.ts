@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Project } from '../shared/project';
+import { ProjectService } from '../service/project.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,16 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  project = {
-    name: 'Voting App',
-    image: 'https://images.unsplash.com/photo-1494172892981-ce47ca685eea',
-    stack: ['react', 'react-router', 'express', 'mangodb'],
-    info: 'voting app details'
-  };
+  project: Project;
+  baseURL = 'assets/';
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.projectService.getProjects().then(projects => this.project = projects[0]);
   }
 
 }
