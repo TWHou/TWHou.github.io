@@ -1,6 +1,6 @@
 <div class="container" *ngIf="loading">Loading....</div>
 <div class="container" *ngIf="!loading">
-  <nav class="nav nav-pills nav-justified">
+  <nav class="nav nav-pills nav-justified my-3">
     <a
       class="nav-item nav-link"
       (click)="select('app')"
@@ -16,25 +16,23 @@
       Microservice APIs
     </a>
   </nav>
-  <div class="row" *ngIf="selected === 'app'">
-    <div class="col-md-6" *ngFor="let project of apps">
-      <div class="card bg-dark text-white">
+  <div class="card-columns" *ngIf="selected === 'app'">
+      <div class="card bg-dark text-white" *ngFor="let project of apps">
         <img class="card-img" [src]="baseURL + project.image" alt="Card image">
         <div class="card-img-overlay">
           <h4 class="card-title">{{project.name}}</h4>
           <p class="card-text">
-            <span *ngFor="let i of project.stack">
-              {{i}}
+            Stack: 
+            <span *ngFor="let i of project.stack; let isLast=last">
+              {{i}}{{isLast ? '' : ', '}}
             </span>
           </p>
           <p class="card-text">{{project.info}}</p>
         </div>
       </div>
-    </div>
   </div>
-  <div class="row" *ngIf="selected === 'api'">
-    <div class="col-md-6" *ngFor="let project of apis">
-      <div class="card">
+  <div class="card-columns" *ngIf="selected === 'api'">
+      <div class="card" *ngFor="let project of apis">
         <div class="card-body">
           <h4 class="card-title">{{project.name}}</h4>
           <p class="card-text">
@@ -45,6 +43,5 @@
           <p class="card-text">{{project.info}}</p>
         </div>
       </div>
-    </div>
   </div>
 </div>
