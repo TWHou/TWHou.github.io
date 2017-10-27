@@ -19,7 +19,7 @@
   <div class="card-columns" *ngIf="selected === 'app'">
       <div class="card bg-dark text-white" *ngFor="let project of apps">
         <img class="card-img" [src]="baseURL + project.image" alt="Card image">
-        <div class="card-img-overlay">
+        <div class="card-img-overlay" [routerLink]="['/projects', project.id]">
           <h4 class="card-title">{{project.name}}</h4>
           <p class="card-text">
             Stack: 

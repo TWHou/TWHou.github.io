@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectService } from './service/project.service';
 
 import { RoutesModule } from './routes/routes.module';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RoutesModule } from './routes/routes.module';
     HomeComponent,
     ProjectsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

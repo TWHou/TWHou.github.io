@@ -1,0 +1,7 @@
+<div class="container" *ngIf="project$ | async as project">
+  <p>
+    {{project.name}}
+  </p>
+  <p>{{project.detail}}</p>
+  <a [href]="project.repo">View on github</a>
+</div>
