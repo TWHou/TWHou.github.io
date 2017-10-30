@@ -2,6 +2,7 @@
   <p>
     {{project.name}}
   </p>
-  <p>{{project.detail}}</p>
+  <p>{{project.detail.current}}</p>
+  <p *ngIf="project.detail.future">{{project.detail.future}}</p>
   <a [href]="project.repo">View on github</a>
 </div>

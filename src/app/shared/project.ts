@@ -8,5 +8,10 @@ export class Project {
   repo: string;
   video?: string;
   url?: string;
-  detail: string;
+  detail: Detail;
+}
+
+class Detail {
+  current: string;
+  future: string;
 }
