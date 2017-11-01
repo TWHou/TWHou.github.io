@@ -14,6 +14,7 @@ import { ProjectService } from '../service/project.service';
 export class ProjectDetailComponent implements OnInit {
 
   project$: Observable<Project>;
+  baseURL = 'assets/';
 
   constructor(
     private projectService: ProjectService,

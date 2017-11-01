@@ -1,8 +1,17 @@
 <div class="container" *ngIf="project$ | async as project">
-  <p>
-    {{project.name}}
-  </p>
-  <p>{{project.detail.current}}</p>
-  <p *ngIf="project.detail.future">{{project.detail.future}}</p>
-  <a [href]="project.repo">View on github</a>
+  <div class="row">
+    <div class="col-md-4" *ngIf="project.image">
+      <img class="img-fluid" [src]="baseURL + project.image" [alt]="project.name">
+      <a class="btn btn-secondary btn-block" [href]="project.repo">View on github</a>
+      <a class="btn btn-info btn-block" [href]="project.url" *ngIf="project.url" target="_blank">View Demo</a>
+    </div>
+    <div class="col-md">
+      <h1 class="display-4">{{project.name}}</h1>
+      <p class="lead">{{project.detail.current}}</p>
+      <div *ngIf="project.detail.future">
+        <h3>Possible Improvements</h3>
+        <p>{{project.detail.future}}</p>
+      </div>
+    </div>
+  </div>
 </div>

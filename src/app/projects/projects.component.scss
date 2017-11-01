@@ -1,3 +1,6 @@
 .card-img-overlay {
-  background-color: rgba($color: #383838, $alpha: 0.5)
+  background-color: rgba($color: #383838, $alpha: 0.7)
+}
+.card-img-overlay:hover {
+  background-color: rgba($color: #383838, $alpha: 0.3)
 }

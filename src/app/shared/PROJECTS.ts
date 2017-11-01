@@ -61,6 +61,7 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/TWHou/subreddit-viewer',
     info: 'View a subreddit of your choice',
     image: 'subreddit.png',
+    url: 'https://twhou.github.io/subreddit-viewer/',
     detail: {
       current: 'Simple interface to display a subreddit thread. This project \
       came as a coding challenge for a job application. The UI design was \
@@ -77,6 +78,7 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/TWHou/voting-app',
     info: 'Can\'t make a decision? Put it to a vote!',
     image: 'pollster.png',
+    url: 'https://twhou-vote.herokuapp.com/',
     detail: {
       current: 'Pollster is a simple voting app that allows users to create, \
       and vote on polls. If there\'s not a suitable option, user can add their \
@@ -124,6 +126,7 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/TWHou/twitch-json-api',
     info: 'See which channels are online',
     image: 'twitch.png',
+    url: 'https://twhou.github.io/twitch-json-api/',
     detail: {
       current: 'Shows the status of a predefined list of channels with the \
       option of showing only channels that are online/offline. Due to this \
@@ -142,9 +145,14 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/TWHou/random-quote',
     info: 'Things people said',
     image: 'random_quote.png',
+    url: 'https://twhou.github.io/random-quote/',
     detail: {
-      current: 'This was a fun little project that gives the visitor a random quote and a button to tweet it out.',
-      future: ''
+      current: 'This was a fun little project that gives the visitor a random \
+      quote and a button to tweet it out. Note: Will need CORS plugin to be \
+      able to display quotes.',
+      future: 'The API I\'m currently using is provided by a fellow \
+      FreeCodeCamper and is not maintained. I will either have to find a \
+      maintained API that allows CORS, or write my own.'
     }
   }, {
     id: 110,
@@ -178,6 +186,7 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/TWHou/neighborhood-map',
     info: 'Museums of the Museum Mile',
     image: 'neighborhood_map.png',
+    url: 'https://twhou.github.io/neighborhood-map/',
     detail: {
       current: 'This was small project for practicing the MV* concept. The \
       requirements were to use the Knockout framework, use Google Maps API for \
@@ -212,6 +221,7 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/TWHou/multi-user-blog',
     info: 'Blog with your friends',
     image: 'multi_user_blog.png',
+    url: 'https://udacity-project-2-twhou.appspot.com/blog',
     detail: {
       current: 'A simple platform for people to post, comment and vote. \
       Handlers and models are in separate packages for clean and maintainable \
