@@ -1,29 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-3">Christina Hsieh</h1>
-    <p class="lead">Web Developer with a passion for puzzles.</p>
+    <div class="row">
+      <div class="col-md order-md-2">
+        <img [src]="baseURL + 'IMG_2642.jpg'" alt="profile picture" class="rounded-circle img-fluid">
+      </div>
+      <div class="col-md-7 order-md-1 d-flex flex-column justify-content-center">
+        <h1 class="display-3">Christina Hsieh</h1>
+        <p class="lead">Web Developer with a passion for puzzles.</p>
+      </div>
+    </div>
   </div>
 </div>
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md">
-      <p class="lead">I am a passionate full stack web developer who loves building apps. I have experience with Angular, React, Express.js, MongoDB, Knockout.js, Flask, Sqlite, and Google Cloud SDK.</p>
-    </div>
-    <div class="col-md">
-      <h2>Projects</h2>
-      <div class="card bg-dark text-white" *ngIf="project">
-        <img class="card-img" [src]="baseURL + project.image" alt="Card image">
-        <div class="card-img-overlay">
-          <h4 class="card-title">{{project.name}}</h4>
-          <p class="card-text">
-            <span *ngFor="let i of project.stack">
-              {{i}}
-            </span>
-          </p>
-          <p class="card-text">{{project.info}}</p>
-        </div>
-      </div>
-      <button type="button" class="btn btn-info" routerLink="/projects">More Projects</button>
-    </div>
-  </div>
-</div> -->
